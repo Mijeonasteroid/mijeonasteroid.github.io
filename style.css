@@ -1,4 +1,12 @@
-/* Reset et styles de base */
+@font-face {
+  font-family: 'FEAR Logo';
+  src: url('fonts/FEARLogo-Regular.woff2') format('woff2'),
+       url('fonts/FEARLogo-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
   margin: 0;
   padding: 0;
