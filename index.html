@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MIJE flix</title>
+  <!-- Lien vers le fichier CSS externe -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header id="header">
+  <div class="logo">MIJE flix</div>
+  <nav>
+    <a href="#">Accueil</a>
+    <a href="#">Projets</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section id="hero">
+  <div id="poster"></div>
+  <video id="hero-video" muted preload="auto" playsinline>
+    <source src="medias/video.webm" />
+    Votre navigateur ne supporte pas la vidéo.
+  </video>
+  <div class="hero-overlay"></div>
+
+  <div class="title">
+    <h1>Mijeonasteroid</h1>
+    <p class="subtitle">Vision Beyond Pixels</p>
+<p class="seasons">26 saisons</p>
+<p class="synopsis">
+Dans l’univers numérique, Jonathan est un explorateur passionné, transformant chaque projet en une aventure visuelle unique, où l’imaginaire et la réalité fusionnent en un spectacle saisissant.</p>
+    <div class="hero-buttons">
+      <a href="https://www.youtube.com/@Mijeonasteroid" class="btn play" target="_blank">▶ Regarder</a>
+      <button class="btn like" id="btn-like">👍 J'aime</button>
+      <button class="btn dislike">👎 Je n'aime pas</button>
+    </div>
+  </div>
+</section>
+
+<main id="main-content">
+  <!-- Les catégories seront insérées ici par le JS -->
+</main>
+
+<footer>
+  © 2025 Mijeonasteroid & Chat GPT – Tous droits réservés
+</footer>
+
+<!-- Lien vers le fichier JS externe -->
+<script src="script.js"></script>
+</body>
+</html>
