@@ -202,27 +202,16 @@ section.category h2 {
 
 /* Scroll container et items */
 
-.scroll-wrapper {
-  overflow-x: auto;
-overflow-y: visible;
-  position: relative;
-  padding-left: 3vw;
-  margin-left: -3vw;
-	margin-right:-3vw;
-	padding-right:3vw;
-}
-
 .scroll-container {
   display: flex;
   gap: 2%;
-  overflow-x: auto;
-  overflow-y: visible;
+  overflow: visible;
   scrollbar-width: none;
   -ms-overflow-style: none;
-	  padding-left: 3vw;
+  padding-left: 3vw;
   margin-left: -3vw;
-	margin-right:-3vw;
-	padding-right:3vw;
+  margin-right:-3vw;
+  padding-right:3vw;
 }
 .scroll-container::-webkit-scrollbar {
   display: none; /* Chrome/Safari */
