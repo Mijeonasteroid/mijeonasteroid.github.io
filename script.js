@@ -144,18 +144,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-if (window.innerWidth > 768) {
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const header = document.getElementById('header');
-    const hero = document.getElementById('hero');
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const header = document.getElementById('header');
+  const hero = document.getElementById('hero');
 
-    if (scrollY > 40) {
-      header.classList.add('scrolled');
+  if (scrollY > 40) {
+    header.classList.add('scrolled');
+    
+    // Applique shrink seulement sur desktop
+    if (window.innerWidth > 768) {
       hero.classList.add('shrink');
-    } else {
-      header.classList.remove('scrolled');
+    }
+  } else {
+    header.classList.remove('scrolled');
+    if (window.innerWidth > 768) {
       hero.classList.remove('shrink');
     }
-  });
-}
+  }
+});
