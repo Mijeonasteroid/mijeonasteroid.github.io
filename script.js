@@ -90,16 +90,20 @@ shuffledItems.forEach(({image, title, description, date, saisons}) => {
 // Gestion du scroll (bouclage)
 function scrollRight(index) {
   const container = document.getElementById(`scroll-${index}`);
-  const last = container.lastElementChild;
-  container.insertBefore(last, container.firstElementChild);
+  const item = container.querySelector('.item');
+  if (!item) return; // sécurité si pas d'item
+
+  const itemWidth = item.offsetWidth + parseInt(getComputedStyle(item).marginRight || 0);
+  container.scrollBy({ left: itemWidth, behavior: 'smooth' });
 }
 
 function scrollLeft(index) {
   const container = document.getElementById(`scroll-${index}`);
-  const first = container.firstElementChild;
-  if (first) {
-    container.appendChild(first);
-  }
+  const item = container.querySelector('.item');
+  if (!item) return;
+
+  const itemWidth = item.offsetWidth + parseInt(getComputedStyle(item).marginRight || 0);
+  container.scrollBy({ left: -itemWidth, behavior: 'smooth' });
 }
 
 // Animation du header et du hero
