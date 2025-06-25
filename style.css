@@ -203,7 +203,8 @@ section.category h2 {
 /* Scroll container et items */
 
 .scroll-wrapper {
-  overflow: hidden;
+  overflow-x: auto;
+overflow-y: visible;
   position: relative;
   padding-left: 3vw;
   margin-left: -3vw;
@@ -272,8 +273,6 @@ z-index:1;
   opacity: 1;
   transform: translateY(0);
   box-shadow: 0 15px 50px 0px rgba(255, 129, 177, 0.8); 
-
-
 }
 .info h3 {
   margin-bottom: 4px;
