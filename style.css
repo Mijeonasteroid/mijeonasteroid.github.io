@@ -488,9 +488,20 @@ background-color:transparent;
   #header nav {
     display: none;
   }
-	  #header.scrolled {
-    background-color: rgba(0, 0, 0, 0.95); /* plus foncé si besoin */
+	
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
   }
 
+  #header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
 
 }
