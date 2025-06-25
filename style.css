@@ -206,6 +206,7 @@ section.category h2 {
   display: flex;
   gap: 2%;
   overflow: visible;
+scroll-behavior:smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding-left: 3vw;
@@ -287,9 +288,9 @@ z-index:1;
 /* Flèches scroll */
 .arrow-left, .arrow-right {
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
-  font-size: 2rem;
+  font-size: 4rem;
   cursor: pointer;
   user-select: none;
   z-index: 1000;
@@ -297,11 +298,12 @@ z-index:1;
 }
 
 .arrow-left {
-  left: 0.5rem;
+  left: 1rem;
+
 }
 
 .arrow-right {
-  right: 0.5rem;
+  right: 1rem;
 }
 
 /* Footer */

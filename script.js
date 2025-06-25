@@ -58,8 +58,8 @@ categories.forEach((category, index) => {
 
   section.innerHTML = `
     <h2>${category.name}</h2>
-<div class="arrow-left" onclick="scrollLeft(${index})">&#8249;</div>
-<div class="arrow-right" onclick="scrollRight(${index})">&#8250;</div>
+<div class="arrow-left" onclick="scrollLeftCustom(${index})">&#8249;</div>
+<div class="arrow-right" onclick="scrollRightCustom(${index})">&#8250;</div>
     <div class="scroll-container" id="scroll-${index}"></div>
   `;
 
@@ -88,23 +88,50 @@ shuffledItems.forEach(({image, title, description, date, saisons}) => {
 });
 
 // Gestion du scroll (bouclage)
-function scrollRight(index) {
-  const container = document.getElementById(`scroll-${index}`);
-  const item = container.querySelector('.item');
-  if (!item) return; // sécurité si pas d'item
-
-  const itemWidth = item.offsetWidth + parseInt(getComputedStyle(item).marginRight || 0);
-  container.scrollBy({ left: itemWidth, behavior: 'smooth' });
-}
-
-function scrollLeft(index) {
+function scrollRightCustom(index) {
   const container = document.getElementById(`scroll-${index}`);
   const item = container.querySelector('.item');
   if (!item) return;
 
   const itemWidth = item.offsetWidth + parseInt(getComputedStyle(item).marginRight || 0);
-  container.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+
+  const style = window.getComputedStyle(container);
+  const matrix = new DOMMatrix(style.transform);
+  let currentTranslateX = matrix.m41 || 0;
+
+  let newTranslateX = currentTranslateX - itemWidth;
+
+  if (newTranslateX > 0) newTranslateX = 0;
+
+  const maxTranslateX = -(container.scrollWidth - container.clientWidth);
+  if (newTranslateX < maxTranslateX) newTranslateX = maxTranslateX;
+
+  container.style.transition = 'transform 0.3s ease';
+  container.style.transform = `translateX(${newTranslateX}px)`;
 }
+
+function scrollLeftCustom(index) {
+  const container = document.getElementById(`scroll-${index}`);
+  const item = container.querySelector('.item');
+  if (!item) return;
+
+  const itemWidth = item.offsetWidth + parseInt(getComputedStyle(item).marginRight || 0);
+
+  const style = window.getComputedStyle(container);
+  const matrix = new DOMMatrix(style.transform);
+  let currentTranslateX = matrix.m41 || 0;
+
+  let newTranslateX = currentTranslateX + itemWidth;
+
+  if (newTranslateX > 0) newTranslateX = 0;
+
+  const maxTranslateX = -(container.scrollWidth - container.clientWidth);
+  if (newTranslateX < maxTranslateX) newTranslateX = maxTranslateX;
+
+  container.style.transition = 'transform 0.3s ease';
+  container.style.transform = `translateX(${newTranslateX}px)`;
+}
+
 
 // Animation du header et du hero
 const header = document.getElementById('header');
