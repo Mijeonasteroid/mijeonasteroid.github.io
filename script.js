@@ -136,3 +136,11 @@ document.querySelectorAll('.category').forEach(category => {
     });
   });
 });
+
+if (window.innerWidth <= 768) {
+  document.querySelectorAll('.item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('expanded');
+    });
+  });
+}

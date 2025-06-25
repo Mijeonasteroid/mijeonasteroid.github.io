@@ -63,14 +63,17 @@ a {
 #hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
-  transition: height 0.6s ease;
+  transition: max-height 0.6s ease;
 background-color:black;
+  aspect-ratio: 16 / 9;
+
 
 }
 #hero.shrink {
-  height: 35vh;
+  max-height: 35vh;
+transition: max-height 0.6s ease;
 }
 #hero video,
 #poster {
@@ -89,7 +92,6 @@ background-color:black;
 }
 #poster.hidden {
   opacity: 0;
-  pointer-events: none;
 }
 
 /* Texte dans hero */
@@ -167,7 +169,6 @@ h1 {
   height: 100%;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, transparent 60%);
   z-index: 2;
-  pointer-events: none;
 }
 
 /* Sections catégorie */
@@ -241,14 +242,12 @@ z-index:1;
   opacity: 0;
   transform: translateY(5px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
   border-radius: 0 0 10px 10px;
 }
 
 .item:hover .info {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto;
   box-shadow: 0 15px 50px 0px rgba(255, 129, 177, 0.8); 
 
 
@@ -333,4 +332,98 @@ footer {
   font-size: 0.75rem;
   color: #ccc;
   margin: 0.2rem 0;
+}
+
+@media (max-width: 768px) {
+
+
+  .scroll-container {
+    display: block;
+    overflow-x: visible;
+	padding:10%;
+  }
+
+  .item {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .item .info {
+    display: none;
+  }
+
+  .item.expanded .info {
+    display: block ;
+  }
+
+
+
+#hero.shrink {
+  max-height: none;
+}
+
+  #hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    height: 100vh;
+    overflow: visible;
+background-color:transparent;
+padding-top:60px;
+justify-content:flex-end;
+position:relative;
+  }
+
+#poster {
+position:absolute;
+}
+#hero {
+margin-bottom:10%;
+}
+
+  #hero video,
+  #hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    mask-image: none;
+  }
+
+  .hero-overlay {
+    display: none;
+  }
+
+  /* Texte en dessous */
+  #hero .title {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin: 20px auto 10px auto;
+    padding: 0 10px;
+    font-size: 1.6rem;
+	background-color:transparent;
+  }
+
+  #hero .subtitle,
+  #hero .seasons,
+  #hero .synopsis,
+  #hero .hero-buttons {
+    text-align: center;
+    max-width: 90%;
+    margin: 5px auto;
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    scale: 0.9;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    display: none;
+  }
+
 }
