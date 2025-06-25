@@ -288,28 +288,23 @@ z-index:1;
 }
 
 /* Flèches scroll */
-.arrow-left,
-.arrow-right {
+.arrow-left, .arrow-right {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  color: white;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: center;
+  font-size: 2rem;
   cursor: pointer;
-  z-index: 10;
   user-select: none;
+  z-index: 10;
+  color: #fff; /* ou ce que tu veux */
 }
+
 .arrow-left {
-  left: 0;
+  left: 0.5rem;
 }
+
 .arrow-right {
-  right: 0;
+  right: 0.5rem;
 }
 
 /* Footer */
