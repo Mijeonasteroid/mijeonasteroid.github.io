@@ -254,8 +254,6 @@ z-index:1;
   z-index: 100;
   border-radius: 10px 10px 0 0;
   box-shadow: 0 0 50px 5px rgba(255, 129, 177, 0.8);
-position:absolute;
-
 }
 
 /* Infos des items */
@@ -305,8 +303,8 @@ position:absolute;
   font-size: 2rem;
   cursor: pointer;
   user-select: none;
-  z-index: 10;
-  color: #fff; /* ou ce que tu veux */
+  z-index: 1000;
+  color: #fff;
 }
 
 .arrow-left {
