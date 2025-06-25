@@ -58,7 +58,8 @@ categories.forEach((category, index) => {
 
   section.innerHTML = `
     <h2>${category.name}</h2>
-    <div class="arrow-right" onclick="scrollRight(${index})">&#8250;</div>
+<div class="arrow-left" onclick="scrollLeft(${index})">&#8249;</div>
+<div class="arrow-right" onclick="scrollRight(${index})">&#8250;</div>
     <div class="scroll-container" id="scroll-${index}"></div>
   `;
 
@@ -91,6 +92,12 @@ function scrollRight(index) {
   const container = document.getElementById(`scroll-${index}`);
   const last = container.lastElementChild;
   container.insertBefore(last, container.firstElementChild);
+}
+
+function scrollLeft(index) {
+  const container = document.getElementById(`scroll-${index}`);
+  const first = container.firstElementChild;
+  container.appendChild(first);
 }
 
 // Animation du header et du hero
