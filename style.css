@@ -204,11 +204,14 @@ section.category h2 {
 .scroll-container {
   display: flex;
   gap: 2%;
-  overflow-x: visible;
+  overflow-x: auto;
   position: relative;
   padding-left: 3vw;
   margin-left: -3vw;
-  scrollbar-width: none; /* Firefox */
+	margin-right:-3vw;
+	padding-right:3vw;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   z-index: 1;
   overflow-y: visible;
 }
