@@ -97,7 +97,9 @@ function scrollRight(index) {
 function scrollLeft(index) {
   const container = document.getElementById(`scroll-${index}`);
   const first = container.firstElementChild;
-  container.appendChild(first);
+  if (first) {
+    container.appendChild(first);
+  }
 }
 
 // Animation du header et du hero
