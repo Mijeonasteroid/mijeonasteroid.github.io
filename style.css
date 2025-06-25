@@ -47,6 +47,8 @@ a {
   letter-spacing: 2px;
   margin-right: 40px;
   user-select: none;
+  font-family:'FEAR Logo', sans-serif;
+  color:rgb(131,16,16);
 }
 #header nav {
   display: flex;
@@ -178,6 +180,7 @@ section.category h2 {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 1.8rem;
+  font-family: 'Cinzel', serif;
 }
 
 /* Scroll container et items */
