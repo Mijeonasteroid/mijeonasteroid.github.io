@@ -488,6 +488,9 @@ background-color:transparent;
   #header nav {
     display: none;
   }
+	  #header.scrolled {
+    background-color: rgba(0, 0, 0, 0.95); /* plus foncé si besoin */
+  }
 
 
 }
