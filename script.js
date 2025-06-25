@@ -60,9 +60,7 @@ categories.forEach((category, index) => {
     <h2>${category.name}</h2>
 <div class="arrow-left" onclick="scrollLeft(${index})">&#8249;</div>
 <div class="arrow-right" onclick="scrollRight(${index})">&#8250;</div>
-<div class="scroll-wrapper">
     <div class="scroll-container" id="scroll-${index}"></div>
-    </div>
   `;
 
   main.appendChild(section);
