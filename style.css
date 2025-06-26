@@ -348,7 +348,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
   color: #fff;
   padding: 2rem;
   flex-wrap: wrap;
@@ -375,7 +374,7 @@ footer {
 
 .footer-column a:hover {
   text-decoration: underline;
-  color: #e50914;
+  text-color: #e50914;
 }
 
 .logo-column {
@@ -383,7 +382,7 @@ footer {
 }
 
 .logo-column img {
-  max-height: 80px;
+  max-height: 20vw;
   object-fit: contain;
 }
 
