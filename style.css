@@ -344,6 +344,47 @@ footer {
   margin: 0.2rem 0;
 }
 
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
+  padding: 2rem;
+  flex-wrap: wrap;
+  font-family: 'Cinzel', serif; /* Si tu utilises Cinzel */
+  gap: 1rem;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.logo-column {
+  text-align: center;
+}
+
+.logo-column img {
+  max-height: 80px;
+  object-fit: contain;
+}
+
 @media (max-width: 768px) {
 
   .scroll-container {
@@ -496,6 +537,14 @@ background-color:transparent;
 
   #header.scrolled {
     background-color: rgba(0, 0, 0, 0.9);
+  }
+	  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 1.5rem;
   }
 
 }
