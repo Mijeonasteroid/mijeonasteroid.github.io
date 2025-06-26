@@ -306,13 +306,6 @@ z-index:1;
   right: 1rem;
 }
 
-/* Footer */
-footer {
-  padding: 40px;
-  text-align: center;
-  color: #aaa;
-}
-
 .category {
   position: relative;
   z-index: 1;
@@ -373,7 +366,7 @@ footer {
 
 .footer-column a:hover {
   text-decoration: underline;
-  text-color: #e50914;
+  color: #e50914;
 }
 
 .logo-column {
@@ -383,6 +376,14 @@ footer {
 .logo-column img {
   max-height: 20vw;
   object-fit: contain;
+}
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  font-family: 'Cinzel', serif;
 }
 
 @media (max-width: 768px) {
