@@ -346,12 +346,12 @@ z-index:1;
   flex-wrap: wrap;
   gap: 1rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+ text-align: center;
 }
 
 .footer-column {
   flex: 1;
   min-width: 200px;
-  text-align: center;
 }
 
 .footer-column h3 {
